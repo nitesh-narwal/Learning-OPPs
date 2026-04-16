@@ -25,7 +25,7 @@ public class Step2_StaticInnerClass {
     
     // Static variable - shared by all instances
     public static int totalCarsSold = 150;
-    
+
     // Instance variable - specific to each instance
     private String companySeminar = "Auto Expo 2026";
     
