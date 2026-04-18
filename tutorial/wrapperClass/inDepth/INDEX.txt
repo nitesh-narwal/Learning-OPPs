@@ -1,0 +1,508 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                ║
+║                   WRAPPER CLASSES - COMPLETE LEARNING GUIDE                    ║
+║                         Beginner to Advanced Level                              ║
+║                                                                                ║
+║                              📚 INDEX & GUIDE 📚                               ║
+║                                                                                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+📖 TABLE OF CONTENTS
+═══════════════════════════════════════════════════════════════════════════════════
+
+1. HOW TO START
+2. STEP-BY-STEP GUIDE
+3. KEY TAKEAWAYS
+4. COMMON MISTAKES
+5. ADVANCED CONCEPTS
+6. QUICK REFERENCE
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+1️⃣ HOW TO START
+═══════════════════════════════════════════════════════════════════════════════════
+
+OPTION A: Interactive Menu (Recommended for First Time)
+────────────────────────────────────────────────────────
+$ cd /home/niku/Practice
+$ javac me/niteshh/OPPs/tutorial/wrapperClass/*.java
+$ java me/niteshh/OPPs/tutorial/wrapperClass/WrapperClassMain
+
+Then follow the interactive menu!
+
+
+OPTION B: Run Individual Steps
+──────────────────────────────
+$ java me/niteshh/OPPs/tutorial/wrapperClass/Step1_BasicsOfWrapperClasses
+$ java me/niteshh/OPPs/tutorial/wrapperClass/Step2_PracticalApplications
+... etc
+
+
+OPTION C: Read & Run in IDE
+────────────────────────────
+1. Open WrapperClassMain.java in your IDE (IntelliJ, Eclipse, etc)
+2. Read the comments in each file
+3. Run each step by pressing Run button
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+2️⃣ STEP-BY-STEP GUIDE
+═══════════════════════════════════════════════════════════════════════════════════
+
+BEGINNER LEVEL (2-3 hours)
+──────────────────────────
+
+▶️  STEP 1: Basics of Wrapper Classes
+    File: Step1_BasicsOfWrapperClasses.java
+    Time: ~30 minutes
+
+    Topics Covered:
+    ✓ What are wrapper classes?
+    ✓ Auto-boxing (primitive -> wrapper)
+    ✓ Unboxing (wrapper -> primitive)
+    ✓ Creating wrapper objects
+    ✓ Wrapper vs Primitive comparison
+    ✓ Common methods overview
+
+    Key Learning: "Wrapper classes convert primitives to objects"
+
+    Example:
+    Integer wrapped = 100;        // Auto-boxing
+    int primitive = wrapped;      // Auto-unboxing
+
+
+▶️  STEP 2: Practical Applications
+    File: Step2_PracticalApplications.java
+    Time: ~30 minutes
+
+    Topics Covered:
+    ✓ Using wrappers with Collections (ArrayList, HashMap)
+    ✓ Methods expecting Objects
+    ✓ String to Number conversion
+    ✓ Null handling patterns
+    ✓ Real-world use cases
+
+    Key Learning: "Wrappers are essential for Collections"
+
+    Example:
+    List<Integer> numbers = new ArrayList<>();
+    numbers.add(100);  // Needs wrapper, not primitive
+
+
+INTERMEDIATE LEVEL (2-3 hours)
+───────────────────────────────
+
+▶️  STEP 3: Boxing and Unboxing Deep Dive
+    File: Step3_BoxingAndUnboxing.java
+    Time: ~40 minutes
+
+    Topics Covered:
+    ✓ Manual boxing (old way)
+    ✓ Manual unboxing (old way)
+    ✓ How compiler handles auto-boxing/unboxing
+    ✓ Boxing in arithmetic operations
+    ✓ Boxing in comparisons
+    ✓ NullPointerException during unboxing
+    ✓ Performance impact analysis
+
+    Key Learning: "Understand how boxing/unboxing works internally"
+
+    Important:
+    ⚠️  Unboxing null causes NullPointerException!
+    ⚠️  Boxing/unboxing has performance cost
+
+
+▶️  STEP 6: Common Pitfalls (Read Before Moving Forward!)
+    File: Step6_CommonPitfalls.java
+    Time: ~45 minutes
+
+    Topics Covered:
+    ✓ PITFALL 1: Using == instead of equals()
+    ✓ PITFALL 2: NullPointerException in unboxing
+    ✓ PITFALL 3: Boxing/Unboxing in loops (performance)
+    ✓ PITFALL 4: Constructor vs valueOf()
+    ✓ PITFALL 5: Float/Double precision issues
+    ✓ PITFALL 6: NumberFormatException handling
+    ✓ PITFALL 7: Wrapper array initialization
+    ✓ PITFALL 8: Dangerous loop conditions
+
+    Key Learning: "AVOID THESE MISTAKES!"
+
+    MOST IMPORTANT:
+    ❌ WRONG: if (a == b)         // Compares references
+    ✓ RIGHT: if (a.equals(b))    // Compares values
+
+
+ADVANCED LEVEL (2-3 hours)
+──────────────────────────
+
+▶️  STEP 4: Advanced Concepts
+    File: Step4_AdvancedConcepts.java
+    Time: ~40 minutes
+
+    Topics Covered:
+    ✓ Integer caching (-128 to 127)
+    ✓ Cache boundaries and behavior
+    ✓ Why == is dangerous
+    ✓ Different cache ranges for different types
+    ✓ Practical impact of caching
+    ✓ valueOf() vs new Constructor
+
+    Key Learning: "Caching affects == comparison results"
+
+    Example:
+    Integer a = 100;
+    Integer b = 100;
+    a == b;  // TRUE (both from cache)
+
+    Integer c = 200;
+    Integer d = 200;
+    c == d;  // FALSE (both new objects, not cached)
+
+    ⚠️  This is why equals() is safer!
+
+
+▶️  STEP 5: Utility Methods
+    File: Step5_UtilityMethods.java
+    Time: ~45 minutes
+
+    Topics Covered:
+    ✓ valueOf() - Convert to wrapper
+    ✓ parseInt(), parseDouble() - Parse strings
+    ✓ intValue(), doubleValue() - Extract primitives
+    ✓ toString() - Convert to String
+    ✓ MIN_VALUE, MAX_VALUE - Get limits
+    ✓ toBinaryString(), toHexString() - Number bases
+    ✓ compareTo(), compare() - Compare values
+    ✓ equals(), hashCode() - Compare objects
+    ✓ TYPE - Get primitive type info
+
+    Key Learning: "Wrapper classes have many utility methods"
+
+
+▶️  STEP 7: Tips and Tricks
+    File: Step7_TipsAndTricks.java
+    Time: ~45 minutes
+
+    Topics Covered:
+    ✓ Use Optional instead of null
+    ✓ String conversion techniques
+    ✓ Leverage caching for performance
+    ✓ Efficient comparisons
+    ✓ Collection operations
+    ✓ Null-safe operations
+    ✓ Sorting wrapper collections
+    ✓ Type checking patterns
+    ✓ Validation patterns
+    ✓ Map operations
+    ✓ Memory considerations
+    ✓ Best practices
+
+    Key Learning: "Professional coding techniques"
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+3️⃣ KEY TAKEAWAYS
+═══════════════════════════════════════════════════════════════════════════════════
+
+WHAT ARE WRAPPER CLASSES?
+─────────────────────────
+Wrapper classes are objects that "wrap" primitive values:
+    boolean  ->  Boolean
+    int      ->  Integer
+    double   ->  Double
+    ... and so on
+
+WHY DO WE NEED THEM?
+───────────────────
+1. Collections only accept Objects (ArrayList<Integer>, not ArrayList<int>)
+2. Some methods require Objects as parameters
+3. We need utility methods on primitive values
+4. We need to store null values (primitives cannot)
+
+AUTO-BOXING & AUTO-UNBOXING
+──────────────────────────
+Since Java 5, the compiler automatically converts:
+    Integer wrapped = 100;    // Auto-boxing: 100 -> Integer.valueOf(100)
+    int primitive = wrapped;  // Auto-unboxing: wrapped.intValue()
+
+THE MOST IMPORTANT RULE!
+───────────────────────
+❌ NEVER use == to compare wrapper objects
+✓ ALWAYS use .equals() method
+
+Why? Because caching makes == unpredictable:
+    Integer a = 100;
+    Integer b = 100;
+    a == b;  // TRUE (both cached) <- This is confusing!
+
+    Integer c = 200;
+    Integer d = 200;
+    c == d;  // FALSE (not cached) <- Inconsistent!
+
+    a.equals(b);  // TRUE (compares values) <- Always works!
+    c.equals(d);  // TRUE (compares values) <- Always works!
+
+NULL HANDLING
+─────────────
+✓ Wrapper objects CAN be null
+✗ Primitive values CANNOT be null
+
+Unboxing null causes NullPointerException:
+    Integer value = null;
+    int primitive = value;  // ❌ NullPointerException!
+
+Safe way:
+    int safe = value != null ? value : 0;  // ✓ Correct
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+4️⃣ COMMON MISTAKES
+═══════════════════════════════════════════════════════════════════════════════════
+
+MISTAKE 1: Using == to compare wrapper objects
+──────────────────────────────────────────────
+❌ WRONG:
+    Integer a = 100;
+    Integer b = 100;
+    if (a == b) { ... }  // Works due to caching (confusing!)
+
+✓ CORRECT:
+    if (a.equals(b)) { ... }  // Always works
+
+
+MISTAKE 2: Unboxing null without checking
+──────────────────────────────────────────
+❌ WRONG:
+    Integer value = null;
+    int primitive = value;  // NullPointerException!
+
+✓ CORRECT:
+    int safe = value != null ? value : 0;
+
+
+MISTAKE 3: Using wrappers in performance loops
+──────────────────────────────────────────────
+❌ WRONG:
+    Long sum = 0L;
+    for (int i = 0; i < 1000000; i++) {
+        sum += i;  // Boxing/unboxing overhead!
+    }
+
+✓ CORRECT:
+    long sum = 0L;
+    for (int i = 0; i < 1000000; i++) {
+        sum += i;  // No overhead
+    }
+
+
+MISTAKE 4: Assuming new Constructor and valueOf() are identical
+──────────────────────────────────────────────────────────────
+❌ WRONG:
+    Integer obj1 = new Integer(100);
+    Integer obj2 = new Integer(100);
+    obj1 == obj2;  // FALSE (different objects)
+
+✓ BETTER:
+    Integer obj1 = Integer.valueOf(100);
+    Integer obj2 = Integer.valueOf(100);
+    obj1 == obj2;  // TRUE (cached object) - but don't rely on this!
+
+
+MISTAKE 5: Comparing Float/Double with ==
+──────────────────────────────────────────
+❌ WRONG:
+    double result = 0.1 + 0.2;
+    if (result == 0.3) { ... }  // FALSE due to precision!
+
+✓ CORRECT:
+    double epsilon = 1e-9;
+    if (Math.abs(result - 0.3) < epsilon) { ... }
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+5️⃣ ADVANCED CONCEPTS
+═══════════════════════════════════════════════════════════════════════════════════
+
+INTEGER CACHING
+───────────────
+Java caches Integer objects in range -128 to 127:
+
+    Integer a = 100;   // Gets cached object
+    Integer b = 100;   // Gets SAME cached object
+    a == b;  // TRUE
+
+    Integer c = 200;   // Creates new object (outside cache)
+    Integer d = 200;   // Creates ANOTHER new object
+    c == d;  // FALSE
+
+Similar caching for: Boolean, Byte, Short, Long
+NO caching for: Float, Double
+
+CACHE RANGES:
+    Integer:  -128 to 127
+    Long:     -128 to 127
+    Byte:     -128 to 127 (all possible values)
+    Short:    -128 to 127
+    Boolean:  true, false (only these two)
+    Float:    NO CACHE
+    Double:   NO CACHE
+
+IMPORTANT: Caching is an implementation detail, NOT something to rely on!
+
+
+BOXING VS UNBOXING PERFORMANCE
+──────────────────────────────
+Boxing and unboxing have performance cost:
+- Primitives stored in Stack (fast)
+- Wrapper objects stored in Heap (slower memory access)
+- Boxing creates new object (memory allocation)
+- Unboxing calls method (method call overhead)
+
+In loops: primitives are 1-10x faster than wrappers!
+
+WHEN TO USE PRIMITIVES:
+    ✓ Loops and calculations
+    ✓ Performance-critical code
+    ✓ Memory-constrained environments
+
+WHEN TO USE WRAPPERS:
+    ✓ Collections (ArrayList, HashMap)
+    ✓ API method parameters
+    ✓ When you need null values
+    ✓ When you need utility methods
+
+
+UTILITY METHODS
+───────────────
+valueOf():           Convert primitive or String to wrapper
+parseInt():          Parse String to primitive int
+parseDouble():       Parse String to primitive double
+intValue():          Extract int from wrapper
+doubleValue():       Extract double from wrapper
+toString():          Convert to String
+compareTo():         Compare two wrappers
+equals():            Compare values
+hashCode():          Get hash code
+toBinaryString():    Convert to binary
+toHexString():       Convert to hexadecimal
+MIN_VALUE:           Minimum value for type
+MAX_VALUE:           Maximum value for type
+TYPE:                Class object of primitive type
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+6️⃣ QUICK REFERENCE
+═══════════════════════════════════════════════════════════════════════════════════
+
+PRIMITIVE TO WRAPPER MAPPING
+────────────────────────────
+boolean  →  Boolean
+byte     →  Byte
+char     →  Character
+short    →  Short
+int      →  Integer
+long     →  Long
+float    →  Float
+double   →  Double
+
+
+AUTO-BOXING AND UNBOXING RULES
+──────────────────────────────
+Auto-boxing:   Integer num = 100;         // Compiler: Integer.valueOf(100)
+Auto-unboxing: int val = num;             // Compiler: num.intValue()
+
+In operations:
+    Integer a = 50;
+    Integer b = 100;
+    int sum = a + b;                      // Both auto-unboxed then added
+    Integer wrapped = sum;                // Result auto-boxed
+
+
+COMPARISON CHEAT SHEET
+──────────────────────
+✓ Use this:
+    if (a.equals(b)) { }           // Compare values
+    if (a.compareTo(b) < 0) { }    // Compare and order
+
+❌ Don't use this:
+    if (a == b) { }                // Reference comparison (unreliable)
+
+
+NULL HANDLING PATTERNS
+──────────────────────
+Safe unboxing:
+    Integer value = ...;
+    int safe = value != null ? value : 0;
+
+Or using Optional (Java 8+):
+    Optional<Integer> value = ...;
+    int safe = value.orElse(0);
+
+
+COMMON CONVERSIONS
+──────────────────
+String → Integer:   int num = Integer.parseInt("100");
+String → Double:    double num = Double.parseDouble("3.14");
+String → Boolean:   boolean num = Boolean.parseBoolean("true");
+
+Integer → String:   String str = Integer.toString(100);
+Double → String:    String str = Double.toString(3.14);
+Any → String:       String str = "" + value;
+
+
+NUMBER BASE CONVERSIONS
+───────────────────────
+int num = 255;
+
+Binary:     String bin = Integer.toBinaryString(num);     // "11111111"
+Hex:        String hex = Integer.toHexString(num);        // "ff"
+Octal:      String oct = Integer.toOctalString(num);      // "377"
+
+Parse Binary:   int num = Integer.parseInt("11111111", 2);
+Parse Hex:      int num = Integer.parseInt("FF", 16);
+Parse Octal:    int num = Integer.parseInt("377", 8);
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+🎓 FINAL CHECKLIST
+═══════════════════════════════════════════════════════════════════════════════════
+
+After completing all 7 steps, you should know:
+
+✓ [ ] What wrapper classes are and why they exist
+✓ [ ] How to create wrapper objects (valueOf, new)
+✓ [ ] How auto-boxing and auto-unboxing work
+✓ [ ] How to use wrappers with Collections
+✓ [ ] How to compare wrapper objects (ALWAYS use equals!)
+✓ [ ] Integer caching behavior (-128 to 127)
+✓ [ ] Why == comparison is dangerous
+✓ [ ] How to handle null wrapper objects
+✓ [ ] All main utility methods
+✓ [ ] Common pitfalls to avoid
+✓ [ ] Best practices and optimization
+✓ [ ] When to use primitives vs wrappers
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+🚀 NEXT TOPICS TO LEARN
+═══════════════════════════════════════════════════════════════════════════════════
+
+After mastering Wrapper Classes:
+1. Collections Framework (ArrayList, HashMap, Set, etc)
+2. Generics in Java
+3. Streams API (Java 8+)
+4. Optional class (better null handling)
+5. Lambda expressions and Method references
+6. Functional interfaces
+
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+Happy Learning! If you have questions, refer back to the individual step files.
+The comments in each file provide detailed explanations! 🎉
+
+═══════════════════════════════════════════════════════════════════════════════════
+
