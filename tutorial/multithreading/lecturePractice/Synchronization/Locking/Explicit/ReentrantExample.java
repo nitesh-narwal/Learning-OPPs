@@ -58,6 +58,7 @@ public class ReentrantExample {
     ─────────────────────────────────────────────────────────────────
     */
     private final Lock lock = new ReentrantLock();
+    // DeadLock prevention...
 
     public void OuterMethod(){
         // FIRST LOCK ACQUISITION (counter = 1)

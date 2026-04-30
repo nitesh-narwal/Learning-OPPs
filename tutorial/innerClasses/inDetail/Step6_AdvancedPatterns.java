@@ -343,7 +343,7 @@ public class Step6_AdvancedPatterns {
             public void unlock() { System.out.println("🔓 " + carName + " unlocked"); }
             
             @Override
-            public void enableAlarm() { System.out.println("🚨 Alarm enabled"); }
+            public void enableAlarm() { System.out.println("🚨 alarm enabled"); }
             
             @Override
             public void accelerate() { System.out.println("⚡ Accelerating"); }
