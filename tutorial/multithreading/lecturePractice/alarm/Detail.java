@@ -371,7 +371,7 @@ package me.niteshh.OPPs.tutorial.multithreading.lecturePractice.alarm;
  * The Alarm Package demonstrates PRODUCER-CONSUMER pattern with:
  * 
  * ✓ Multiple producers (10 threads) adding items
- * ✓ Single consumer (main thread) processing items  
+ * ✓ Single consumer (main thread) processing items
  * ✓ Bounded queue (max 5 alarms)
  * ✓ Thread communication (wait/notify)
  * ✓ Thread safety (synchronized)

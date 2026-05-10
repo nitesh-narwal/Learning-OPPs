@@ -15,6 +15,7 @@ public class Test {
         try{
             while(true) {
                 alarmClock.startAlarm();
+                Thread.sleep(1000); // Check for alarms every second
             }
         } catch (Exception e) {
             System.out.println("Alarm clock interrupted: " + e.getMessage());

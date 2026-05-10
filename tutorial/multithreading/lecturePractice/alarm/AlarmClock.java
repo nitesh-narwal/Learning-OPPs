@@ -3,6 +3,7 @@ package me.niteshh.OPPs.tutorial.multithreading.lecturePractice.alarm;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Semaphore;
 
 public class AlarmClock {
 
@@ -18,44 +19,53 @@ public class AlarmClock {
      * */
 
     private final List<Alarm> alarms = new ArrayList<>();
-    private final int MAX_ALARM = 5;
+   // private final int MAX_ALARM = 5;
+
+    private Semaphore vacantSeats = new Semaphore(5);
+    private Semaphore filledSeats = new Semaphore(0);
 
     public void pushAlarm(Alarm alarm){
         synchronized (this){
-            while(alarms.size() == MAX_ALARM){
-                try{
-                    wait();
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    return;
+//            while(alarms.size() == MAX_ALARM){
+//                try{
+//                    wait();
+//                } catch (InterruptedException e) {
+//                    Thread.currentThread().interrupt();
+//                    return;
+//                }
+//            }
+        try {
+                vacantSeats.acquire();  // vacantSeat - 1
+                if (alarm.getTime().isAfter(LocalDateTime.now())) {
+                    alarms.add(alarm);
+                    System.out.println("Alarm set: " + alarm.getReminder() + " at " + alarm.getTime());
+                    filledSeats.release();  // filledSeat + 1
                 }
-            }
-            if(alarm.getTime().isAfter(LocalDateTime.now())){
-                alarms.add(alarm);
-                notifyAll();
+        } catch (Exception e) {
+
             }
         }
     }
 
     public void startAlarm(){
         synchronized (this){
-            while(alarms.isEmpty()){
-                try{
-                    wait();
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    return;
-                }
-            }
+//            while(alarms.isEmpty()){
+//                try{
+//                    wait();
+//                } catch (InterruptedException e) {
+//                    Thread.currentThread().interrupt();
+//                    return;
+//                }
+//            }
+
             try {
-                Thread.sleep(1000); // Simulate the time taken to check the alarms
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                return;
+                filledSeats.acquire(); // filledSeat - 1 < 0 wait Forever, proceed
+                Alarm alarm = alarms.remove(alarms.size() - 1);
+                System.out.println("Alarm ringing: " + alarm.getReminder());
+                vacantSeats.release(); // vacantSeat + 1
+            } catch (Exception e) {
+
             }
-            Alarm alarm = alarms.remove(alarms.size()-1);
-            System.out.println("Alarm ringing: " + alarm.getReminder());
-            notifyAll();
         }
     }
 }
