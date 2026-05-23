@@ -1,4 +1,4 @@
-package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.Lecture2.map;
+package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.Lecture2.map.hashmap;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -195,5 +195,12 @@ public class HashMapInterface {
          *    which is why it's important to choose an appropriate initial capacity and load factor
          *    when creating a HashMap to minimize the need for resizing.
          */
+
+
+        /*
+        *  HOW HASHMAP FIND THE CORRECT KEY IN CASE OF COLLISION:
+        *    1. It used map.get(key) to find the value associated with the key. And this map.get(key) method performs "equals" operation on the key.
+        *    2.
+        * */
     }
 }
