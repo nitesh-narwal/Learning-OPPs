@@ -1,6 +1,7 @@
 package me.niteshh.OPPs.tutorial.multithreading.lecturePractice;
 
 public class AboutThreads extends Thread {
+
     @Override
     public void run() {
         System.out.println("Thread is running... " + Thread.currentThread().getName());
