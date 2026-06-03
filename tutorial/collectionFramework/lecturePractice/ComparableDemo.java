@@ -5,7 +5,7 @@ package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice;
 
 
 
-import me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.Lecture1.Student;
+import me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.List_Lecture.Student;
 
 import java.util.ArrayList;
 import java.util.List;
