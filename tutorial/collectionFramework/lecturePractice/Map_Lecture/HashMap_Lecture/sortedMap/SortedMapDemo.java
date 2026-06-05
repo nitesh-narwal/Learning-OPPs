@@ -1,4 +1,4 @@
-package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.HashMap_Lecture.sortedMap;
+package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.Map_Lecture.HashMap_Lecture.sortedMap;
 
 import java.util.SortedMap;
 import java.util.TreeMap;

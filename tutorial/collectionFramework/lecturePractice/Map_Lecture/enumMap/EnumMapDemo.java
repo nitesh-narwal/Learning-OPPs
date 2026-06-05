@@ -1,4 +1,4 @@
-package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.enumMap;
+package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.Map_Lecture.enumMap;
 
 import java.util.EnumMap;
 

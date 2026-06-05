@@ -1,4 +1,4 @@
-package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.ImmutableMap;
+package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.Map_Lecture.ImmutableMap;
 
 import org.testcontainers.shaded.com.google.common.collect.ImmutableMap;
 

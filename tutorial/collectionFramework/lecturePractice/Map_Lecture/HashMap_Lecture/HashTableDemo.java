@@ -1,4 +1,4 @@
-package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.HashMap_Lecture;
+package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.Map_Lecture.HashMap_Lecture;
 
 import java.util.Hashtable;
 

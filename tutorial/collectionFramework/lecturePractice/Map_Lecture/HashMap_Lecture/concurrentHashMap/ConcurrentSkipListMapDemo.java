@@ -1,4 +1,4 @@
-package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.HashMap_Lecture.concurrentHashMap;
+package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.Map_Lecture.HashMap_Lecture.concurrentHashMap;
 
 import java.util.concurrent.ConcurrentSkipListMap;
 

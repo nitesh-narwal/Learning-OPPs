@@ -1,4 +1,4 @@
-package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.HashMap_Lecture.navigableMap;
+package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.Map_Lecture.HashMap_Lecture.navigableMap;
 
 import java.util.NavigableMap;
 import java.util.TreeMap;
