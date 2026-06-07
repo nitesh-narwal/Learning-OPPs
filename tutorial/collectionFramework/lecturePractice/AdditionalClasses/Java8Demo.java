@@ -1,5 +1,6 @@
 package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.AdditionalClasses;
 
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Java8Demo {
@@ -68,8 +69,15 @@ class PredicateDemo{
 }
 
 class FunctionDemo{
+    // Function ---> Works for you
     static void main(String[] args) {
+            // Function is a functional interface( takes one argument and returns a result)
+            Function<Integer, Integer> square = n -> n * n;
+            System.out.println("Square of 5 : " + square.apply(5));
 
+            // We can also use Function to convert one type to another
+            Function<String, Integer> stringLength = s -> s.length();
+            System.out.println("Length of the string 'Hello' : " + stringLength.apply("Hello"));
     }
 }
 
