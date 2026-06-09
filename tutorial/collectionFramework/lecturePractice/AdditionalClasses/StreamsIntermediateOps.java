@@ -3,7 +3,6 @@ package me.niteshh.OPPs.tutorial.collectionFramework.lecturePractice.AdditionalC
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Stream;
 
 public class StreamsIntermediateOps {
@@ -82,7 +81,8 @@ public class StreamsIntermediateOps {
                     Arrays.asList("grape", "honey")
             );
         System.out.println(listOfLists.get(1).get(1));
-        Stream<String> stringStream = listOfLists.stream().flatMap(x -> x.stream().map(String::toUpperCase)); // Intermediate operation: convert each element of the list to uppercase and concatenate them
+        // Intermediate operation: convert each element of the list to uppercase and concatenate them
+        Stream<String> stringStream = listOfLists.stream().flatMap(x -> x.stream().map(String::toUpperCase));
         System.out.println("Flattened stream: " + stringStream.toList());
 
         //Example 2:
@@ -98,9 +98,34 @@ public class StreamsIntermediateOps {
                 .flatMap(x -> Arrays.stream(x.split(" ")))
                 .map(String::toUpperCase).toList()); // Intermediate operation: split each sentence into words and flatten them into a single stream
 
-
-        Stream<String> stream2 = names.stream().flatMap(x -> Stream.of(x, x.toUpperCase())); // Intermediate operation: convert each name to uppercase and concatenate them
+        // Intermediate operation: convert each name to uppercase and concatenate them
+        Stream<String> stream2 = names.stream().flatMap(x -> Stream.of(x, x.toUpperCase()));
         System.out.println("Names in uppercase and concatenated: " + stream2.toList());
+
+        // Example :
+        // Stream can't be reused after terminal operation is invoked.
+        // So, if we want to use the same stream for another operation, we need to create a new stream.
+        // otherwise, we will get an IllegalStateException: stream has already been operated upon or closed.
+        // For example, if we want to print the names in uppercase and then sort them, we can use the following code:
+        Stream<String> stream3 = names.stream().map(String::toUpperCase).sorted();
+        System.out.println("Names in uppercase and sorted: " + stream3.toList());
+
+        // 11. forEachOrdered(Consumer<? super T> action): Performs the given action for each element of this stream,
+        //                                             in the order they are returned by the stream.
+        //                                             The action is performed after the stream is terminated,
+        //                                             if it is a terminal operation.
+        // Use when we are using parallelstream and want to print the elements in the order they are processed.
+
+        List<Integer> numberOrdered = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        System.out.println("\nUsing forEach to print the numbers in parallerl stream in the order they are processed: ");
+        numberOrdered.parallelStream().forEach(System.out::println);
+
+        System.out.println("\nUsing forEachOrdered to print the numbers in parallerl stream in the order they are processed: ");
+        numberOrdered.parallelStream().forEachOrdered(System.out::println);
+
+            Stream<String> stream4 = names.parallelStream().map(String::toUpperCase).sorted();
+            stream4.forEachOrdered(System.out::println);
+
     }
 }
 
